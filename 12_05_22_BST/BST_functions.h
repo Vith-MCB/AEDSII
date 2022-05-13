@@ -16,3 +16,5 @@ typedef struct no {
  */
 void insereNodeArvore(apontador *no, int valor);
 void percorreNoORDEM(apontador no);
+void percorreNoPOSORDEM(apontador no);
+void percorreNoPREORDEM(apontador no);

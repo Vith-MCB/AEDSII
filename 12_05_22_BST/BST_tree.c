@@ -1,4 +1,4 @@
-#include "BST_treeHeader.h"
+#include "BST_tree.h"
 #include <stdio.h>
 
 
@@ -12,5 +12,13 @@ void inserirNaArvore(Tree *arvore, int valor){
 
 void percorreArvoreORDEM(Tree *arvore){
     percorreNoORDEM(arvore->raiz);
+}
+
+void percorreArvorePOSORDEM(Tree *arvore){
+    percorreNoPOSORDEM(arvore->raiz);
+}
+
+void percorreArvorePREORDEM(Tree *arvore){
+    percorreNoPREORDEM(arvore->raiz);
 }
 

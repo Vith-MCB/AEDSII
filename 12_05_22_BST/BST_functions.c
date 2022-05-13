@@ -1,4 +1,4 @@
-#include "BST_header.h"
+#include "BST_functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -33,5 +33,25 @@ void percorreNoORDEM(apontador no){
     printf("{%d}", (*no).valor);
     if((*no).dir != NULL){
         percorreNoORDEM((*no).dir);
+    }
+}
+
+void percorreNoPOSORDEM(apontador no){
+    if((*no).esq != NULL){
+        percorreNoPOSORDEM((*no).esq);
+    }
+    if((*no).dir != NULL){
+        percorreNoPOSORDEM((*no).dir);
+    }
+    printf("{%d}", (*no).valor);
+}
+
+void percorreNoPREORDEM(apontador no){
+    printf("{%d}", (*no).valor);
+    if((*no).esq != NULL){
+        percorreNoPOSORDEM((*no).esq);
+    }
+    if((*no).dir != NULL){
+        percorreNoPOSORDEM((*no).dir);
     }
 }
