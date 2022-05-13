@@ -6,22 +6,19 @@
 /*
  * Insert value at the tree (it checks if the node is = null)
  */
-void insereNodeArvore(int valor, apontador *no){
+void insereNodeArvore(apontador *no, int valor){
     if(*no == NULL){
         *no = (apontador) malloc(sizeof(apontador));
         (*no)->valor = valor;
         (*no)->esq = NULL;
         (*no)->dir = NULL;
-        return;
     }
     else{
         if(valor > (*no)->valor){
-            insereNodeArvore(valor, &(*no)->dir);
-            return;
+            insereNodeArvore(&(*no)->dir, valor);
         }
         else{
-            insereNodeArvore(valor, &(*no)->esq);
-            return;
+            insereNodeArvore(&(*no)->esq, valor);
         }
     }
 }
@@ -29,12 +26,12 @@ void insereNodeArvore(int valor, apontador *no){
 /*
  * This function is used to go through the nodes of the tree
  */
-void percorreNoORDEM(apontador *no){
-    if((*no)->esq != NULL){
-        percorreNoORDEM((*no)->esq);
+void percorreNoORDEM(apontador no){
+    if((*no).esq != NULL){
+        percorreNoORDEM((*no).esq);
     }
-    printf("{%d}", (*no)->valor);
-    if((*no)->dir != NULL){
-        percorreNoORDEM((*no)->dir);
+    printf("{%d}", (*no).valor);
+    if((*no).dir != NULL){
+        percorreNoORDEM((*no).dir);
     }
 }

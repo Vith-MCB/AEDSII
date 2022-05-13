@@ -5,7 +5,7 @@
 
 typedef struct no *apontador;
 
-typedef struct no{
+typedef struct no {
     int valor;
     apontador  esq, dir;
 } no;
@@ -14,5 +14,5 @@ typedef struct no{
 /*
  * Defining the function that initialize the tree
  */
-int insereNodeArvore(int valor, apontador *no);
-void percorreNoORDEM(apontador *no);
+void insereNodeArvore(apontador *no, int valor);
+void percorreNoORDEM(apontador no);

@@ -1,7 +1,7 @@
 #include "BST_header.h"
 
 typedef struct Tree {
-    apontador *raiz;
+    apontador raiz;
 } Tree;
 
 void inicializaArvore(Tree *arvore);
