@@ -1,0 +1,22 @@
+#Árvore de pesquisa com balanceamento
+
+- Distribui as chaves uniformemente, diminuindo o tempo médio de pesquisa.
+- Nós externos aparecem em no máximo dois níveis
+- Alto custo para manter o balanceamento após inserções e retiradas
+
+#Symmetric Binary B-tree (SBB)
+ * Binary tree with two type of pointers, vertical and horizontal:
+ -Todos os caminhos da raiz até cada nó externo(folha) possui o mesmo número de apontadores verticais
+ -Não podem existir dois apontadores horizontais sucessivos
+
+    *Transformação de Bayer
+    - Transformações locais no caminho de inserção ou retirada (p/ preservar balanceamento)
+    - A chave a ser inserida ou retirada é sempre ins. ou ret. após o apontador vertical mais baixo na árvore
+    - Podem aparecer dois apontadores horizontais sucessivos *NECESSÁRIO REALIZAR TRANSFORMAÇÃO
+        EX: { [5] -> [7] -> [9] }->  {      [7]      }
+                                     {  [5]     [9]  }
+
+            { [5] -> [9] (pointing to [9]: right), [7] <- [9] (pointing to [7]: left) }->  {      [7]      }
+                                                                                           {  [5]     [9]  }
+
+    
