@@ -1,13 +1,13 @@
-#include "BST_tree.h"
-#include <stdio.h>
+#include <stddef.h>
 
+#include "BST_treeImp.h"
 
 void inicializaArvore(Tree *arvore){
     arvore->raiz = NULL;
 }
 
-void inserirNaArvore(Tree *arvore, int valor){
-    insereNodeArvore(&arvore->raiz, valor);
+void inserirNaArvore(Tree *arvore, aluno *student){
+    insereNodeArvore(&arvore->raiz, student);
 }
 
 void percorreArvoreORDEM(Tree *arvore){
