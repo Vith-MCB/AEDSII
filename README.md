@@ -1,2 +1,2 @@
 # AEDSII
- Programs and applications did at the Algorithm Uni. classes
+ Programs and applications made at the Algorithm Uni. classes

@@ -3,7 +3,7 @@
 
 
 void inicializaArvore(Tree *arvore) {
-    arvore->raiz = NULL;
+    arvore->raiz = NULL ;
 }
 
 void inserirNaArvore(Tree *arvore, aluno *valor) {
