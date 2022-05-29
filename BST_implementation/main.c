@@ -5,8 +5,8 @@
 
 #include "tree.h"
 
-#define FILE_PATH "..//BST-Implementation//"
-#define ERROR_FILE "\nError during file read"
+#define FILE_PATH "..//AEDSII//BST_implementation//"
+#define ERROR_FILE "\nError during file read\n"
 #define NULL_TERMINATOR 1
 
 
@@ -17,18 +17,19 @@ int main() {
 
     inicializaArvore(&tree);
 
-    if (!lerArquivo(&tree, "alunosNotas")) {
+    if (!lerArquivo(&tree, "alunosNotas.txt")) {
         printf(ERROR_FILE);
+        return 0;
     }
 
 
-    printf("In-Order Traversal\n");
+    printf("Percorre na ordem: \n");
     percorreArvoreORDEM(&tree);
 
-    printf("\n\nPre Order Traversal\n");
+    printf("\n\nPercorre pre-ordem: \n");
     percorreArvorePREORDEM(&tree);
 
-    printf("\n\nPost Order Traversal\n");
+    printf("\n\nPercorre pos-ordem: \n");
     percorreArvorePOSORDEM(&tree);
 
     printf("\n");
@@ -38,7 +39,7 @@ bool lerArquivo(Tree *tree, char *filename) {
     char caminhoArquivo[strlen(FILE_PATH) + strlen(filename) + NULL_TERMINATOR];
 
     strcpy(caminhoArquivo, FILE_PATH);
-    strcpy(caminhoArquivo, filename);
+    strcat(caminhoArquivo, filename);
 
     FILE *pFile = fopen(caminhoArquivo, "r");
 

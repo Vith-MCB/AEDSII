@@ -6,8 +6,8 @@ void inicializaArvore(Tree *arvore) {
     arvore->raiz = NULL;
 }
 
-void inserirNaArvore(Tree *arvore, apontador *no) {
-    insereNodeArvore(&arvore->raiz, &(*no)->student);
+void inserirNaArvore(Tree *arvore, aluno *valor) {
+    insereNodeArvore(&arvore->raiz, valor);
 }
 
 void percorreArvoreORDEM(Tree *arvore) {

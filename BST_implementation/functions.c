@@ -10,7 +10,6 @@ void insereNodeArvore(apontador *no, aluno *valor) {
     if (*no == NULL) {
         *no = (apontador) malloc(sizeof(apontador));
 
-
         (*no)->student.nota = (*valor).nota;
         (*no)->esq = NULL;
         (*no)->dir = NULL;
@@ -30,7 +29,7 @@ void percorreNoORDEM(apontador no) {
     if ((*no).esq != NULL) {
         percorreNoORDEM((*no).esq);
     }
-    printf("{%d}", (*no).student.nota);
+    printf("{%.2f}", (*no).student.nota);
     if ((*no).dir != NULL) {
         percorreNoORDEM((*no).dir);
     }
@@ -43,11 +42,11 @@ void percorreNoPOSORDEM(apontador no) {
     if ((*no).dir != NULL) {
         percorreNoPOSORDEM((*no).dir);
     }
-    printf("{%d}", (*no).student.nota);
+    printf("{%.2f}", (*no).student.nota);
 }
 
 void percorreNoPREORDEM(apontador no) {
-    printf("{%d}", (*no).student.nota);
+    printf("{%.2f}", (*no).student.nota);
     if ((*no).esq != NULL) {
         percorreNoPOSORDEM((*no).esq);
     }

@@ -4,14 +4,11 @@
 int main(){
     Tree arvore;
     inicializaArvore(&arvore);
-    inserirNaArvore(&arvore, 13);
     inserirNaArvore(&arvore, 8);
-    inserirNaArvore(&arvore, 12);
     inserirNaArvore(&arvore, 5);
-    inserirNaArvore(&arvore, 18);
-    inserirNaArvore(&arvore, 8);
-    inserirNaArvore(&arvore, 6);
-    inserirNaArvore(&arvore, 17);
+    inserirNaArvore(&arvore, 9);
+    inserirNaArvore(&arvore, 3);
+    inserirNaArvore(&arvore, 7);
 
     printf("Percorre arvore na ordem: \n");
     percorreArvoreORDEM(&arvore);

@@ -12,4 +12,4 @@ void percorreArvorePOSORDEM(Tree *arvore);
 
 void percorreArvorePREORDEM(Tree *arvore);
 
-void inserirNaArvore(Tree *arvore, apontador *no);
+void inserirNaArvore(Tree *arvore, aluno *valor);
