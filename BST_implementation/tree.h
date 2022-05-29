@@ -1,4 +1,4 @@
-#include "BST_functions.h"
+#include "functions.h"
 
 typedef struct Tree {
     apontador raiz;
@@ -12,4 +12,4 @@ void percorreArvorePOSORDEM(Tree *arvore);
 
 void percorreArvorePREORDEM(Tree *arvore);
 
-void inserirNaArvore(Tree *arvore, int valor);
+void inserirNaArvore(Tree *arvore, apontador *no);

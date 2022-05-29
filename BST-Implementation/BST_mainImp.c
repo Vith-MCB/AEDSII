@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "BST_functionsImp.h"
 #include "BST_treeImp.h"
 
 int main() {
@@ -9,8 +10,8 @@ int main() {
     char nomeArquivo;
 
 
-    scanf("%s",&nomeArquivo);
-
+    scanf("%s", &nomeArquivo);
+    lerArquivo(&arvore, nomeArquivo);
 
     printf("Qual ordem devera ser impressa?");
     printf("Ordem [0] || Pos [1] || Pre [2]\n");

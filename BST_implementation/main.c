@@ -3,10 +3,36 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "BST_functionsImp.h"
+#include "tree.h"
 
 #define FILE_PATH "..//BST-Implementation//"
+#define ERROR_FILE "\nError during file read"
 #define NULL_TERMINATOR 1
+
+
+bool lerArquivo(Tree *tree, char *filename);
+
+int main() {
+    Tree tree;
+
+    inicializaArvore(&tree);
+
+    if (!lerArquivo(&tree, "alunosNotas")) {
+        printf(ERROR_FILE);
+    }
+
+
+    printf("In-Order Traversal\n");
+    percorreArvoreORDEM(&tree);
+
+    printf("\n\nPre Order Traversal\n");
+    percorreArvorePREORDEM(&tree);
+
+    printf("\n\nPost Order Traversal\n");
+    percorreArvorePOSORDEM(&tree);
+
+    printf("\n");
+}
 
 bool lerArquivo(Tree *tree, char *filename) {
     char caminhoArquivo[strlen(FILE_PATH) + strlen(filename) + NULL_TERMINATOR];
@@ -17,7 +43,6 @@ bool lerArquivo(Tree *tree, char *filename) {
     FILE *pFile = fopen(caminhoArquivo, "r");
 
     if (!pFile) {
-        printf("Erro aq");
         return false;
     }
 

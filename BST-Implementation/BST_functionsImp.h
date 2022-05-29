@@ -28,12 +28,4 @@ void percorreArvorePREORDEM(Tree *arvore);
 
 void inserirNaArvore(Tree *arvore, aluno *student);
 
-void insereNodeArvore(apontador *no, aluno *valor);
-
-void percorreNoORDEM(apontador no);
-
-void percorreNoPOSORDEM(apontador no);
-
-void percorreNoPREORDEM(apontador no);
-
 bool lerArquivo(Tree *tree, char *filename);
