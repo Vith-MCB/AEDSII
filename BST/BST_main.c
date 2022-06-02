@@ -2,6 +2,8 @@
 
 
 int main(){
+    int pesquisar;
+
     Tree arvore;
     inicializaArvore(&arvore);
     inserirNaArvore(&arvore, 8);
@@ -18,4 +20,15 @@ int main(){
 
     printf("\n\nPercorre arvore na pre-ordem: \n");
     percorreArvorePREORDEM(&arvore);
+
+    printf("\nQual numero pesquisar? \n");
+    scanf("%d",&pesquisar);
+
+    if(naArvore(&arvore, pesquisar) == 1 ){
+        printf("\nO elemento %d esta na arvore!\n", pesquisar);
+    }
+    else {
+        printf("\nO elemento %d não se encontra na arvore!\n",pesquisar);
+    }
+
 }

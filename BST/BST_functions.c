@@ -23,6 +23,28 @@ void insereNodeArvore(apontador *no, int valor){
     }
 }
 
+bool procuraATno(apontador no, int numeroPesquisar){
+    if(numeroPesquisar > (*no).valor){
+        if((*no).dir == NULL) {
+            return false;
+        }
+        else{
+            procuraATno((*no).dir,numeroPesquisar);
+        }
+    }
+    else {
+        if ((*no).valor == numeroPesquisar){
+            return true;
+        }
+        if((*no).esq == NULL){
+            return false;
+        }
+        else{
+            procuraATno((*no).esq, numeroPesquisar);
+        }
+    }
+}
+
 /*
  * This function is used to go through the nodes of the tree
  */

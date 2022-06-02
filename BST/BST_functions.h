@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 //Creating Pointers struct to use at the tree
 
@@ -18,3 +19,4 @@ void insereNodeArvore(apontador *no, int valor);
 void percorreNoORDEM(apontador no);
 void percorreNoPOSORDEM(apontador no);
 void percorreNoPREORDEM(apontador no);
+bool procuraATno(apontador no, int numeroPesquisar);

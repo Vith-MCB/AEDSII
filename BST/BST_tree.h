@@ -13,3 +13,5 @@ void percorreArvorePOSORDEM(Tree *arvore);
 void percorreArvorePREORDEM(Tree *arvore);
 
 void inserirNaArvore(Tree *arvore, int valor);
+
+bool naArvore(Tree *arvore, int numero);

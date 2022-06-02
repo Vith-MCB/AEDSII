@@ -10,6 +10,10 @@ void inserirNaArvore(Tree *arvore, int valor){
     insereNodeArvore(&arvore->raiz, valor);
 }
 
+bool naArvore(Tree *arvore, int numero){
+    procuraATno(arvore->raiz, numero);
+}
+
 void percorreArvoreORDEM(Tree *arvore){
     percorreNoORDEM(arvore->raiz);
 }
