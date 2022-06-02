@@ -20,3 +20,4 @@ void percorreNoORDEM(apontador no);
 void percorreNoPOSORDEM(apontador no);
 void percorreNoPREORDEM(apontador no);
 bool procuraATno(apontador no, int numeroPesquisar);
+int encontraMaiorNo(apontador no);

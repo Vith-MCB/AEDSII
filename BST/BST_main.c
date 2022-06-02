@@ -8,6 +8,7 @@ int main(){
     inicializaArvore(&arvore);
     inserirNaArvore(&arvore, 8);
     inserirNaArvore(&arvore, 5);
+    inserirNaArvore(&arvore, 15);
     inserirNaArvore(&arvore, 9);
     inserirNaArvore(&arvore, 3);
     inserirNaArvore(&arvore, 7);
@@ -21,6 +22,8 @@ int main(){
     printf("\n\nPercorre arvore na pre-ordem: \n");
     percorreArvorePREORDEM(&arvore);
 
+    encontraMaiorNaArvore(&arvore);
+
     printf("\nQual numero pesquisar? \n");
     scanf("%d",&pesquisar);
 
@@ -30,5 +33,6 @@ int main(){
     else {
         printf("\nO elemento %d não se encontra na arvore!\n",pesquisar);
     }
+
 
 }

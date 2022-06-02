@@ -45,6 +45,16 @@ bool procuraATno(apontador no, int numeroPesquisar){
     }
 }
 
+int encontraMaiorNo(apontador no){
+    if((*no).dir != NULL){
+        encontraMaiorNo((*no).dir);
+    }
+    else{
+        printf("\nMaior numero: %d\n", (*no).valor);
+    }
+
+}
+
 /*
  * This function is used to go through the nodes of the tree
  */

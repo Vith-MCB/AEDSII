@@ -14,6 +14,10 @@ bool naArvore(Tree *arvore, int numero){
     procuraATno(arvore->raiz, numero);
 }
 
+int encontraMaiorNaArvore(Tree *arvore){
+    encontraMaiorNo(arvore->raiz);
+}
+
 void percorreArvoreORDEM(Tree *arvore){
     percorreNoORDEM(arvore->raiz);
 }

@@ -15,3 +15,5 @@ void percorreArvorePREORDEM(Tree *arvore);
 void inserirNaArvore(Tree *arvore, int valor);
 
 bool naArvore(Tree *arvore, int numero);
+
+int encontraMaiorNaArvore(Tree *arvore);
